@@ -12,11 +12,11 @@ public class Buku24 {
     }
 
     void terjual(int jml){
+        jumlahTerjual = jml;
         stok -= jml;
     }
 
     void restock(int jml){
-        jumlahTerjual = jml;
         stok += jml;
     }
 
