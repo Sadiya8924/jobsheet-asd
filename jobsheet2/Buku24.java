@@ -1,7 +1,7 @@
 public class Buku24 {
 
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, jumlahTerjual;
     
     void tampilInformasi(){
         System.out.println("Judul: " + judul);
@@ -16,11 +16,34 @@ public class Buku24 {
     }
 
     void restock(int jml){
+        jumlahTerjual = jml;
         stok += jml;
     }
 
     void gantiHarga(int hrg){
         harga = hrg;
+    }
+
+    public int hitungHargaTotal(int jml){
+        return harga* (stok - 1);
+    }
+
+    int hitungDiskon(){
+        int totalHarga = hitungHargaTotal(jumlahTerjual);
+        if (totalHarga > 150000){
+            return (int)(0.12 * totalHarga);
+        }
+        else if (totalHarga >= 75000){
+            return (int)(0.05 * totalHarga);
+        }else {
+            return 0;
+        }
+    }
+
+    int hitungHargaBayar(){
+        int totalHarga = hitungHargaTotal(jumlahTerjual);
+        int diskon = hitungDiskon();
+        return totalHarga - diskon;
     }
 
     public Buku24(){
