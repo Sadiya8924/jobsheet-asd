@@ -24,7 +24,14 @@ public class Buku24 {
     }
 
     public Buku24(){
-    
+
+    }
+
+    public Buku24(String jud, int har, int hal, String pg){
+        judul = jud;
+        harga = har;
+        halaman = hal;
+        pengarang = pg;
     }
 
     public Buku24(String jud, String pg, int hal, int stok, int har){

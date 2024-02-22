@@ -16,6 +16,9 @@ public class BukuMain24{
         Buku24 bk2 = new Buku24("Self Reward", "Mahera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku24 bukuSadiya = new Buku24("Bumi Manusia", 40000, 65, "Pramoedya Ananta Toer");
+        bukuSadiya.tampilInformasi();
         
     }
 }
