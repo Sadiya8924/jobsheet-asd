@@ -1,5 +1,5 @@
 public class Dragon {
-    int x, y, width, height;
+    int x = 0, y = 0, width = 0, height = 0;
 
     public Dragon(int x, int y, int width, int height) {
         this.x = x;
@@ -11,40 +11,36 @@ public class Dragon {
     public void moveLeft() {
         if (x > 0) {
             x--;
-        } else {
-            detectCollision();
         }
     }
 
     public void moveRight() {
         if (x < width) {
             x++;
-        } else {
-            detectCollision();
         }
     }
 
     public void moveUp() {
         if (y > 0) {
             y--;
-        } else {
-            detectCollision();
         }
     }
 
     public void moveDown() {
         if (y < height) {
             y++;
+        }
+    }
+
+    public void printPosition() {
+        if (x > 0 && x < width && y > 0 && y < height){
+            System.out.println("Position: (" + x + ", " + y + ")");
         } else {
             detectCollision();
         }
     }
 
-    public void printPosition() {
-        System.out.println("Position: (" + x + ", " + y + ")");
-    }
-
     public void detectCollision() {
-        System.out.println("Collision detected!");
+        System.out.println("GAME OVER!");
     }
 }

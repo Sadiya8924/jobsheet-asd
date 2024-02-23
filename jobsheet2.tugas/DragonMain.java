@@ -4,8 +4,21 @@ public class DragonMain {
         dragon.moveRight();
         dragon.moveDown();
         dragon.printPosition();
+        dragon.moveRight();
         dragon.moveDown();
-        dragon.moveRight();
-        dragon.moveRight();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.moveDown();
+        dragon.printPosition();
+    
     }
 }
