@@ -16,15 +16,17 @@ public class DaftarMahasiswaBerprestasi{
             System.out.println("----------------------");
         }
     }
-    void bubbleShort(){
+    void selectionSort(){
         for(int i = 0; i < ListMhs.length-1; i++){
-            for(int j = 1; j < ListMhs.length-i; j++){
-                if(ListMhs[j].ipk > ListMhs[j-1].ipk){
-                    Mahasiswa tmp = ListMhs[j];
-                    ListMhs[j] = ListMhs[j-1];
-                    ListMhs[j-1] = tmp;
+            int idxMin = i;
+            for(int j = 1 + i; j < ListMhs.length; j++){
+                if(ListMhs[j].ipk < ListMhs[idxMin].ipk){
+                    idxMin = j;
                 }
             }
+            Mahasiswa tmp = ListMhs[idxMin];
+            ListMhs[idxMin] = ListMhs[i];
+            ListMhs[i] = tmp;
         }
     }
 }
