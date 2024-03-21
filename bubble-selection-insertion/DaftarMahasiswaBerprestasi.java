@@ -18,7 +18,7 @@ public class DaftarMahasiswaBerprestasi{
     }
     void bubbleShort(){
         for(int i = 0; i < ListMhs.length-1; i++){
-            for(int j = 1; j < ListMhs.length-1; j++){
+            for(int j = 1; j < ListMhs.length-i; j++){
                 if(ListMhs[j].ipk > ListMhs[j-1].ipk){
                     Mahasiswa tmp = ListMhs[j];
                     ListMhs[j] = ListMhs[j-1];

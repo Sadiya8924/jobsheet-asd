@@ -17,7 +17,7 @@ public class Main{
         System.err.println("Data mahasiswa sebelum sorting = ");
         list.tampil();
 
-        System.out.println("Data mahasiswa setelah sorting desc berdasarkan ipk");
+        System.out.println("Data mahasiswa setelah sorting asc berdasarkan ipk");
         list.bubbleShort();
         list.tampil();
     }
