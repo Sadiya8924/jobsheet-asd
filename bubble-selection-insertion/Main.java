@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         DaftarMahasiswaBerprestasi list = new DaftarMahasiswaBerprestasi();
@@ -17,8 +16,8 @@ public class Main{
         System.err.println("Data mahasiswa sebelum sorting = ");
         list.tampil();
 
-        System.out.println("Data mahasiswa setelah sorting asc berdasarkan ipk");
-        list.selectionSort();
+        System.out.println("Data mahasiswa setelah sorting desc berdasarkan ipk");
+        list.insertionSort();
         list.tampil();
     }
 }
