@@ -33,12 +33,12 @@ public class mahasiswaMain{
         double rataRataIPK = mahasiswa.hitungRataRataIPK(mhArray);
         System.out.println("Rata-rata IPK mahasiswa: " + rataRataIPK);
 
-        mahasiswa maxIPKStudent = mahasiswa.cariIPKTertinggi(mhArray);
+        mahasiswa IPKTertinggi = mahasiswa.cariIPKTertinggi(mhArray);
         System.out.println("Mahasiswa dengan IPK terbesar:");
-        System.out.println("Nama: " + maxIPKStudent.nama);
-        System.out.println("NIM: " + maxIPKStudent.nim);
-        System.out.println("Jenis Kelamin: " + maxIPKStudent.jenisKelamin);
-        System.out.println("Nilai IPK: " + maxIPKStudent.ipk);
+        System.out.println("Nama: " + IPKTertinggi.nama);
+        System.out.println("NIM: " + IPKTertinggi.nim);
+        System.out.println("Jenis Kelamin: " + IPKTertinggi.jenisKelamin);
+        System.out.println("Nilai IPK: " + IPKTertinggi.ipk);
         sc.close();
     }
 }

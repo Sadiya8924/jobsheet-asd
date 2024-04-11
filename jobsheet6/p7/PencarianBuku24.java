@@ -1,4 +1,7 @@
+package p7;
+
 public class PencarianBuku24 {
+
     Buku24 listBk[] = new Buku24[5];
     int idx;
 
@@ -15,7 +18,7 @@ public class PencarianBuku24 {
             m.tampilDataBuku();
         }
     }
-    public int FindSearch(int cari){
+    public int FindSearch(String cari){
         int posisi = -1;
         for (int j = 0; j < listBk.length; j++){
             if (listBk[j].kodeBuku == cari){
@@ -42,7 +45,7 @@ public class PencarianBuku24 {
             System.out.println("data " + x + " data tidak di temukan");
         }
     }
-    public Buku24 FindBuku(int cari) {
+    public Buku24 FindBuku(String cari) {
         for (Buku24 m : listBk) {
             if (m.kodeBuku == cari) {
                 return m;
@@ -51,13 +54,13 @@ public class PencarianBuku24 {
         return null;
     }
     public int FindBinarySearch(String cari, int left, int right) {
-        int mid;
         if (right >= left) {
-            mid = (right + left) / 2;
-            if (cari.equals(listBk[mid].kodeBuku)) {
-                return (mid);
-            } else if (listBk[mid].kodeBuku < cari) {
-                return FindBinarySearch(cari, left, mid-1);
+            int mid = (right + left) / 2;
+            int comparison = cari.compareTo(listBk[mid].kodeBuku);
+            if (comparison == 0) {
+                return mid;
+            } else if (comparison < 0) {
+                return FindBinarySearch(cari, left, mid - 1);
             } else {
                 return FindBinarySearch(cari, mid + 1, right);
             }

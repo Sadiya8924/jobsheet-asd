@@ -2,21 +2,21 @@ public class mahasiswa{
     String  nama, nim, jenisKelamin;
     double ipk;
 
-    public static double hitungRataRataIPK(mahasiswa[] mahasiswaArray) {
+    public static double hitungRataRataIPK(mahasiswa[] mhsArray) {
         double totalIPK = 0;
-        for (mahasiswa mhs : mahasiswaArray) {
+        for (mahasiswa mhs : mhsArray) {
             totalIPK += mhs.ipk;
         }
-        return totalIPK / mahasiswaArray.length;
+        return totalIPK / mhsArray.length;
     }
 
-    public static mahasiswa cariIPKTertinggi(mahasiswa[] mahasiswaArray) {
-        mahasiswa maxIPKStudent = mahasiswaArray[0];
-        for (mahasiswa mhs : mahasiswaArray) {
-            if (mhs.ipk > maxIPKStudent.ipk) {
-                maxIPKStudent = mhs;
+    public static mahasiswa cariIPKTertinggi(mahasiswa[] mhsArray) {
+        mahasiswa IPKTertinggi = mhsArray[0];
+        for (mahasiswa mhs : mhsArray) {
+            if (mhs.ipk > IPKTertinggi.ipk) {
+                IPKTertinggi = mhs;
             }
         }
-        return maxIPKStudent;
+        return IPKTertinggi;
     }
 }

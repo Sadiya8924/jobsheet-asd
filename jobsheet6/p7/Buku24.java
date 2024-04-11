@@ -1,5 +1,8 @@
+package p7;
+
 public class Buku24 {
-    int kodeBuku;
+
+    String kodeBuku;
     String judulBuku;
     int tahunTerbit;
     String pengarang;

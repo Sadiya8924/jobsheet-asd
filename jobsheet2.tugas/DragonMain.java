@@ -16,8 +16,6 @@ public class DragonMain {
         dragon.moveDown();
         dragon.moveDown();
         dragon.moveDown();
-        dragon.moveDown();
-        dragon.moveDown();
         dragon.printPosition();
     
     }

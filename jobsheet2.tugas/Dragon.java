@@ -9,7 +9,7 @@ public class Dragon {
     }
 
     public void moveLeft() {
-        if (x > 0) {
+        if (x >= 0) {
             x--;
         }
     }
@@ -21,7 +21,7 @@ public class Dragon {
     }
 
     public void moveUp() {
-        if (y > 0) {
+        if (y >= 0) {
             y--;
         }
     }
@@ -33,7 +33,7 @@ public class Dragon {
     }
 
     public void printPosition() {
-        if (x > 0 && x < width && y > 0 && y < height){
+        if (x >= 0 && x < width && y >= 0 && y < height){
             System.out.println("Position: (" + x + ", " + y + ")");
         } else {
             detectCollision();

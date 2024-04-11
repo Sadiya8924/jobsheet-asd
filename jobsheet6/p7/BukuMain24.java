@@ -1,6 +1,8 @@
+package p7;
 import java.util.Scanner;
 public class BukuMain24 {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
 
@@ -22,7 +24,7 @@ public class BukuMain24 {
             System.out.print("Stock \t\t: ");
             int stock = sc1.nextInt();
 
-            Buku24 m = new Buku24(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
+            Buku24 m = new Buku24(pengarang, judulBuku, tahunTerbit, pengarang, stock);
             data.tambah(m);
         }
         System.out.println("---------------------------------------------------------");
@@ -36,10 +38,10 @@ public class BukuMain24 {
         System.out.print("Kode buku : ");
         int cari = sc1.nextInt();
         System.out.println("Menggunakan sequential Search");
-        int posisi = data.FindSearch(cari);
+        int posisi = data.FindSearch(String.valueOf(cari));
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
-        Buku24 dataBuku24 = data.FindBuku(cari);
+        Buku24 dataBuku24 = data.FindBuku(String.valueOf(cari));
         if (dataBuku24 != null) {
             dataBuku24.tampilDataBuku();
         } else {
@@ -49,7 +51,7 @@ public class BukuMain24 {
 
         System.out.println("============================");
         System.out.println("Menggunakan binary Search");
-        posisi = data.FindBinarySearch(cari, 0, jmlBuku-1)
+        posisi = data.FindBinarySearch(String.valueOf(cari), 0, jmlBuku - 1);
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
 
