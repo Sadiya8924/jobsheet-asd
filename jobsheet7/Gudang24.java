@@ -1,11 +1,12 @@
 public class Gudang24 {
     Barang24[] tumpukan;
-    int size, top;
+    int size, top, bot;
 
     public Gudang24(int kapasitas){
         size = kapasitas;
         tumpukan = new Barang24[size];
         top = -1;
+        bot = +1;
     }
 
     public boolean cekKosong(){
@@ -55,7 +56,31 @@ public class Gudang24 {
             System.out.println("Tumpukan barang kosong.");
             return null;
         }
-    }  
+    } 
+
+    public Barang24 lihatBarangTerbawah(){
+        if(!cekKosong()){
+            Barang24 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah: " + barangTerbawah.nama);
+            return barangTerbawah;
+        }else{
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+    
+    int kodeBarang;
+    public Barang24 cariBarang(){
+        for (int i = 0; i <= top; i++){
+            if (tumpukan[i].kode == kodeBarang){
+                System.out.println("Barang dengan kode " + kodeBarang + " ditemukan: ");
+                System.out.println("Nama barang: " + tumpukan[i].nama);
+                System.out.println("Katergori: " + tumpukan[i].kategori);
+                return tumpukan[i];
+            }
+        }System.out.println("Barang dengan kode " + kodeBarang + " tidak di temukan.");
+        return null;
+    }
 
     public void tampilkanBarang(){
         if(!cekKosong()){
@@ -71,7 +96,7 @@ public class Gudang24 {
 
     public String konversiDesimalKeBiner(int kode){
         StackKonversi stack = new StackKonversi();
-        while (kode > 0){
+        while (kode != 0){
             int sisa = kode % 2;
             stack.push(sisa);
             kode = kode / 2;
